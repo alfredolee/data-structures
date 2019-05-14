@@ -1,4 +1,4 @@
-package Array;
+package com.alfredolee.Array;
 
 public class Array<T> {
     private T[] data;
@@ -79,8 +79,8 @@ public class Array<T> {
      *
      * @param e, 添加的数组元素
      */
-    public void push(T e) {
-        this.insert(size, e);
+    public void addLast(T e) {
+        this.add(size, e);
     }
 
     /**
@@ -88,8 +88,8 @@ public class Array<T> {
      *
      * @param e, 添加的数组元素
      */
-    public void unshift(T e) {
-        insert(0, e);
+    public void addFirst(T e) {
+        add(0, e);
     }
 
     /**
@@ -98,7 +98,7 @@ public class Array<T> {
      * @param index, 索引
      * @param e,     待添加的元素
      */
-    public void insert(int index, T e) {
+    public void add(int index, T e) {
 
 
         if (index < 0 || index > size) {
@@ -168,7 +168,7 @@ public class Array<T> {
      *
      * @return 数组第一个元素
      */
-    public T shift() {
+    public T removeFirst() {
         return this.remove(0);
     }
 
@@ -177,7 +177,7 @@ public class Array<T> {
      *
      * @return 数组最后一个元素
      */
-    public T pop() {
+    public T removeLast() {
         return this.remove(size - 1);
     }
 

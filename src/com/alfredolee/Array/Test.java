@@ -1,4 +1,4 @@
-package Array;
+package com.alfredolee.Array;
 
 public class Test {
 
@@ -6,14 +6,14 @@ public class Test {
 
         Array<Integer> arr = new Array<Integer>();
         for (int i = 0; i < 10; i++) {
-            arr.push(i);
+            arr.addLast(i);
         }
         System.out.println(arr);
 
-        arr.insert(2, 100);
+        arr.add(2, 100);
         System.out.println(arr);
 
-        arr.unshift(-1);
+        arr.addFirst(-1);
         System.out.println(arr);
 
         arr.remove(3);
@@ -22,10 +22,10 @@ public class Test {
         arr.removeElement(3);
         System.out.println(arr);
 
-        arr.shift();
+        arr.removeFirst();
         System.out.println(arr);
 
-        arr.pop();
+        arr.removeLast();
         System.out.println(arr);
 
         System.out.println(arr.get(0));
